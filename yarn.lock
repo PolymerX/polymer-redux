@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@polymer/polymer@LasaleFamine/polymer#3.0-preview":
+  version "3.0.0-pre.1"
+  resolved "https://codeload.github.com/LasaleFamine/polymer/tar.gz/773ac29294ec8cdd7f310e8ddc7eaf5306bf88ab"
+  dependencies:
+    "@webcomponents/shadycss" "^1.0.0"
+    "@webcomponents/webcomponentsjs" "^1.0.0"
+
 "@types/assert@0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/assert/-/assert-0.0.29.tgz#8e562785baa5abda7c04a49f6665eae7431928d3"
@@ -474,6 +481,14 @@
   resolved "https://registry.yarnpkg.com/@types/yeoman-generator/-/yeoman-generator-1.0.2.tgz#132de401554ca4a16e07e83750565cafe0982362"
   dependencies:
     "@types/inquirer" "*"
+
+"@webcomponents/shadycss@^1.0.0":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.0.5.tgz#ff8537dd06c46f33eccee082cdecd9507bf39f56"
+
+"@webcomponents/webcomponentsjs@^1.0.0":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-1.0.10.tgz#990da9820a89931c8df285871ec943bf99d4a747"
 
 abab@^1.0.3:
   version "1.0.3"
