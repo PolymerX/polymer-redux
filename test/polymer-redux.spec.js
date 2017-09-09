@@ -3,12 +3,7 @@ import konsole from 'global/console';
 import PolymerRedux from '../src';
 
 jest.mock('global/window', () => ({
-	CustomEvent: jest.fn(),
-	Polymer: {
-		Path: {
-			get: jest.fn()
-		}
-	}
+	CustomEvent: jest.fn()
 }));
 
 jest.mock('global/console', () => ({
@@ -122,12 +117,12 @@ describe('#PolymerRedux', () => {
 			});
 
 			describe('bindings', () => {
-				it('should have initial properties set with statePath', () => {
-					window.Polymer.Path.get.mockReturnValueOnce('foo');
-					const e = new (ReduxMixin(ParentWithProps))();
-					e.connectedCallback();
-					expect(e.foo).toBe('foo');
-				});
+				// it('should have initial properties set with statePath', () => {
+				// 	window.Polymer.Path.get.mockReturnValueOnce('foo');
+				// 	const e = new (ReduxMixin(ParentWithProps))();
+				// 	e.connectedCallback();
+				// 	expect(e.foo).toBe('foo');
+				// });
 
 				it('should set readOnly property via _setProperty()', () => {
 					statePath.mockReturnValueOnce('bar');
