@@ -1,15 +1,14 @@
 {
   "name": "polymer-redux",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Polymer bindings for Redux.",
   "main": "lib/polymer-redux.js",
   "module": "src/index.js",
   "jsnext:main": "src/index.js",
   "scripts": {
     "build": "gulp",
-    "pretest": "npm run posttest && ln -s node_modules bower_components && npm run build && npm run lint",
-    "test": "jest && polymer test",
-    "posttest": "rm -rf bower_components",
+    "pretest": "npm run build && npm run lint",
+    "test": "jest",
     "lint": "xo && polymer lint --root=$(pwd)/lib"
   },
   "repository": {
