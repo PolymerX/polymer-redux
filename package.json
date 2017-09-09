@@ -7,8 +7,10 @@
   "jsnext:main": "src/index.js",
   "scripts": {
     "build": "gulp",
-    "pretest": "npm run build && npm run lint",
+    "build:test": "gulp build:test",
+    "pretest": "npm run posttest && ln -s node_modules bower_components && npm run build:test && npm run lint",
     "test": "jest && polymer test",
+    "posttest": "rm -rf bower_components",
     "lint": "xo && polymer lint --root=$(pwd)/lib"
   },
   "repository": {
@@ -29,6 +31,7 @@
   },
   "homepage": "https://github.com/tur-nr/polymer-redux#readme",
   "dependencies": {
+    "@polymer/polymer": "LasaleFamine/polymer#3.0-preview",
     "global": "^4.3.1"
   },
   "devDependencies": {
@@ -103,6 +106,9 @@
     "testMatch": [
       "**/test/?(*.)spec.js"
     ],
-    "verbose": true
+    "verbose": true,
+    "transformIgnorePatterns": [
+      "/!node_modules\\/@polymer/"
+    ]
   }
 }
