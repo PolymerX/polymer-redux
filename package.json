@@ -7,8 +7,7 @@
   "jsnext:main": "src/index.js",
   "scripts": {
     "build": "gulp",
-    "build:test": "gulp build:test",
-    "pretest": "npm run posttest && ln -s node_modules bower_components && npm run build:test && npm run lint",
+    "pretest": "npm run posttest && ln -s node_modules bower_components && npm run build && npm run lint",
     "test": "jest && polymer test",
     "posttest": "rm -rf bower_components",
     "lint": "xo && polymer lint --root=$(pwd)/lib"
